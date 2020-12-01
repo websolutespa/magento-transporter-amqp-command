@@ -38,16 +38,16 @@ class UploadDequeueCommand extends Command
     private $uploaderConsumer;
 
     /**
+     * @param null $name
      * @param Console $consoleLogger
      * @param UploaderInfoFactory $uploaderInfoFactory
      * @param UploaderConsumer $uploaderConsumer
-     * @param null $name
      */
     public function __construct(
+        $name = null,
         Console $consoleLogger,
         UploaderInfoFactory $uploaderInfoFactory,
-        UploaderConsumer $uploaderConsumer,
-        $name = null
+        UploaderConsumer $uploaderConsumer
     ) {
         parent::__construct($name);
         $this->consoleLogger = $consoleLogger;

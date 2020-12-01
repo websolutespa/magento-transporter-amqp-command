@@ -38,16 +38,16 @@ class ManipulateDequeueCommand extends Command
     private $manipulatorConsumer;
 
     /**
+     * @param null $name
      * @param Console $consoleLogger
      * @param ManipulatorInfoFactory $manipulatorInfoFactory
      * @param ManipulatorConsumer $manipulatorConsumer
-     * @param null $name
      */
     public function __construct(
+        $name = null,
         Console $consoleLogger,
         ManipulatorInfoFactory $manipulatorInfoFactory,
-        ManipulatorConsumer $manipulatorConsumer,
-        $name = null
+        ManipulatorConsumer $manipulatorConsumer
     ) {
         parent::__construct($name);
         $this->consoleLogger = $consoleLogger;

@@ -38,16 +38,16 @@ class DownloadDequeueCommand extends Command
     private $downloaderConsumer;
 
     /**
+     * @param null $name
      * @param Console $consoleLogger
      * @param DownloaderInfoFactory $downloaderInfoFactory
      * @param DownloaderConsumer $downloaderConsumer
-     * @param null $name
      */
     public function __construct(
+        $name = null,
         Console $consoleLogger,
         DownloaderInfoFactory $downloaderInfoFactory,
-        DownloaderConsumer $downloaderConsumer,
-        $name = null
+        DownloaderConsumer $downloaderConsumer
     ) {
         parent::__construct($name);
         $this->consoleLogger = $consoleLogger;
